@@ -1,0 +1,53 @@
+<!-- templates/student_list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Years</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+<h1>Years</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Year</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for student in all_student %}
+        <tr>
+            <td>{{ student.name }}</td>
+            <td>{{ student.enrollment_year.year }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
