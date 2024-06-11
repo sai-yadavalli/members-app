@@ -12,12 +12,14 @@ def homepage(request):
     }
     return render(request, 'home.html', context)
 
+
 def disciples_page(request):
     all_student = members_models.Student.objects.all()
     context = {
         'all_student': all_student,
     }
     return render(request, 'disciples.html', context)
+
 
 def years_page(request):
     all_student = members_models.Student.objects.all()

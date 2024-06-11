@@ -6,9 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student List</title>
     <style>
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
         body {
+
             font-family: Arial, sans-serif;
             margin: 20px;
+        }
+
+        .logout-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .logout-button:hover {
+            background-color: #0056b3;
         }
 
         table {
@@ -32,7 +61,12 @@
     </style>
 </head>
 <body>
-<h1>Student List</h1>
+<div class="header">
+    <h1>Student List</h1>
+    <a href="{% url 'logout' %}" class="logout-button">Logout</a>
+</div>
+
+
 <table>
     <thead>
     <tr>
