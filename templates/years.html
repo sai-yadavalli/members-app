@@ -55,12 +55,29 @@
             background-color: #0056b3;
         }
 
+        .home-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .home-button:hover {
+            background-color: #0056b3;
+        }
+
     </style>
 </head>
 <body>
     <header class="page-header">
         <h1>Graduating Years</h1>
-        <a href="{% url 'logout' %}" class="signout-button">Sign Out</a>
+        <a href="{% url 'homepage' %}" class="home-button">Home</a>
+        <a href="{% url 'logout_user' %}" class="signout-button">Sign Out</a>
     </header>
     <table>
         <thead>

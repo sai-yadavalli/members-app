@@ -25,6 +25,36 @@
             margin: 20px;
         }
 
+        .disciples-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .disciples-button:hover {
+            background-color: #0056b3;
+        }
+
+        .years-button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .years-button:hover {
+            background-color: #0056b3;
+        }
+
         .logout-button {
             padding: 10px 20px;
             background-color: #007BFF;
@@ -63,7 +93,9 @@
 <body>
 <div class="header">
     <h1>Student List</h1>
-    <a href="{% url 'logout' %}" class="logout-button">Logout</a>
+    <a href="{% url 'disciples' %}" class="disciples-button">Disciples</a>
+    <a href="{% url 'years' %}" class="years-button">Years</a>
+    <a href="{% url 'logout_user' %}" class="logout-button">Logout</a>
 </div>
 
 
@@ -72,8 +104,6 @@
     <tr>
         <th>Name</th>
         <th>Age</th>
-        <th>Year</th>
-        <th>Degree</th>
     </tr>
     </thead>
     <tbody>
@@ -81,8 +111,6 @@
         <tr>
             <td>{{ student.name }}</td>
             <td>{{ student.age }}</td>
-            <td>{{ student.enrollment_year.year }}</td>
-            <td>{{ student.college_degree.degree }}</td>
         </tr>
     {% endfor %}
     </tbody>
